@@ -1,4 +1,5 @@
-FROM certbot/certbot:v0.27.1
+ARG CERTBOT_VERSION
+FROM certbot/certbot:${CERTBOT_VERSION}
 
 RUN wget https://github.com/sadimusi/docker-certbot-inwx/archive/master.zip && \
     unzip master.zip && \
